@@ -116,5 +116,6 @@ public:
 
 		return count;
 	}
+	bool InitializeWwise();
 private:
 };

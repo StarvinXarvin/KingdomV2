@@ -8,6 +8,10 @@
 
 #include <nlohmann/json.hpp>
 
+#include <AK/SoundEngine/Common/AkSoundEngine.h>
+#include <AK/SoundEngine/Common/AkModule.h>
+#include <AK/SoundEngine/Common/AkMemoryMgr.h>
+
 namespace fs = std::filesystem;
 using json = nlohmann::json;
 
@@ -24,6 +28,11 @@ bool Engine_ModuleScene::Init()
 	fs::create_directories("Library/Materials/");
 
 	addGameObject("Assets/BakerHouse.fbx");
+
+	if (InitializeWwise() == true) {
+		std::cout << "Wwise initialized" << std::endl;
+	}
+	else { std::cout << "Failed to initialize" << std::endl; }
 
 	return true;
 }
@@ -525,4 +534,18 @@ void Engine_ModuleScene::LoadComponentCamera(GameObject* owner, json camerajsonR
 
 	Camera newcamera(owner, fov, ratio, clipnear, clipfar, camoffset, vec0);
 	owner->AddComponent<Camera>(newcamera);
+}
+
+bool Engine_ModuleScene::InitializeWwise() {
+
+	AkMemSettings memSettings;
+	AK::MemoryMgr::GetDefaultSettings(memSettings);
+
+	if (AK::MemoryMgr::Init(&memSettings) == AK_Success) {
+		std::cout << "Memory Manager initialized" << std::endl;
+		return true;
+	}
+	else { std::cout << "Memory Manager failed to initialize" << std::endl; return false; }
+	
+
 }

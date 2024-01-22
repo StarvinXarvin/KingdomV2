@@ -28,6 +28,9 @@
     <Filter Include="Primitives">
       <UniqueIdentifier>{73c6192e-9964-44ed-a09a-80221a3e4139}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Audio Files">
+      <UniqueIdentifier>{1f5b7dec-cb4c-4051-a597-a244dd91c7b7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameEngine.cpp">
