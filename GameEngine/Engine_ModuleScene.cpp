@@ -11,6 +11,12 @@
 #include <AK/SoundEngine/Common/AkSoundEngine.h>
 #include <AK/SoundEngine/Common/AkModule.h>
 #include <AK/SoundEngine/Common/AkMemoryMgr.h>
+#include <AK/Tools/Common/AkPlatformFuncs.h>
+//NOTA: El archivo "AkFilePackageLowLevelIOBlocking.h" no existe en mi proyecto por algún motivo
+#include <AkFilePackageLowLevelIOBlocking.h>
+
+#include <../Common/AkFilePackage.h>
+#include <../Common/AkFilePackageLUT.h>
 
 namespace fs = std::filesystem;
 using json = nlohmann::json;
@@ -547,5 +553,12 @@ bool Engine_ModuleScene::InitializeWwise() {
 	}
 	else { std::cout << "Memory Manager failed to initialize" << std::endl; return false; }
 	
+	AkStreamMgrSettings stmSettings;
+	AK::StreamMgr::GetDefaultSettings(stmSettings);
 
+	if (!AK::StreamMgr::Create(stmSettings)) {
+		std::cout << "Failed to create Streaming Manager" << std::endl;
+		return true;
+	}
+	else { std::cout << "Streaming Manager succesfully created" << std::endl; return false; }
 }
