@@ -344,7 +344,7 @@ protected:
 
 	// Allow creation of specialized AkFileDesc class for derivatives of this class.
 	// Default implementation allocates a AkFileDesc with AkNew, which should be freed in Close().
-	virtual AkFileDesc* CreateDescriptor(const AkFileDesc* in_pCopy = nullptr) override;
+	virtual AkFileDesc* CreateDescriptor(const AkFileDesc* in_pCopy = nullptr); //NOTA: Le he quitado un override al final
 
 	// Language change handling.
     // ------------------------------------------
@@ -395,7 +395,7 @@ protected:
 
 protected:
 
-	virtual AKRESULT Open(const AkFileOpenData& in_FileOpen, AkFileDesc*& out_pFileDesc) override;
+	virtual AKRESULT Open(const AkFileOpenData& in_FileOpen, AkFileDesc*& out_pFileDesc); //NOTA le he quitado un override al final
 
 	// List of loaded packages.
 	ListFilePackages	m_packages;

@@ -284,7 +284,7 @@ namespace AK
 			/// Returns a description for the streaming device above this low-level hook.
 			/// \remarks For profiling purposes only. The Release configuration of the 
 			/// Stream Manager never calls it.
-			virtual void GetDeviceDesc(
+			virtual AKRESULT GetDeviceDesc(
 				AkDeviceDesc &			out_deviceDesc      ///< Device description.
 				) = 0;
 
@@ -396,6 +396,54 @@ namespace AK
 				AkOSChar* out_searchedPath,				///< Pre-allocated string buffer to be filled with all searched paths searched for the file.
 				AkInt32 in_pathSize						///< The maximum size of the string
 			) {	return AK_NotImplemented; };
+		};
+
+		class IAkIOHookBlocking : public IAkLowLevelIOHook
+		{
+		protected:
+			/// Virtual destructor on interface to avoid warnings.
+			virtual ~IAkIOHookBlocking() {}
+
+		public:
+
+			/// Reads data from a file (synchronous). 
+			/// Read data from the file described by in_fileDesc, in address out_pBuffer and with size and position 
+			/// passed within io_transferInfo. When transfer is complete, store the number of bytes that 
+			/// were successfully read into io_transferInfo::uSizeTransferred, and return with the 
+			/// proper return code.
+			/// \remarks 
+			/// File position passed in io_transferInfo takes the offset of this file relative 
+			/// to AkFileDesc::hFile (described with AkFileDesc::uSector). It is computed by the high-level 
+			/// device as "in_fileDesc.uSector * Block_Size + Stream_Position", where Block_Size is obtained 
+			/// via AK::StreamMgr::IAkLowLevelIOHook::GetBlockSize(). 
+			/// \return 
+			///     - AK_Success:	transfer was successful and out_pBuffer is filled with data.
+			///     - AK_Fail:		an error occured.
+			virtual AKRESULT Read(
+				AkFileDesc& in_fileDesc,        ///< File descriptor.
+				const AkIoHeuristics& in_heuristics,		///< Heuristics for this data transfer.
+				void* out_pBuffer,        ///< Buffer to be filled with data.
+				AkIOTransferInfo& io_transferInfo		///< Synchronous data transfer info. 
+			) = 0;
+
+			/// Writes data to a file (synchronous). 
+			/// Write data to the file described by in_fileDesc, from address in_pData and with size and position 
+			/// passed within io_transferInfo. When transfer is complete, store the number of bytes that 
+			/// were successfully written into io_transferInfo::uSizeTransferred, and return with the 
+			/// proper return code.
+			/// \remarks File position passed in io_transferInfo takes the offset of this file relative 
+			/// to AkFileDesc::hFile (described with AkFileDesc::uSector). It is computed by the high-level 
+			/// device as "in_fileDesc.uSector * Block_Size + Stream_Position", where Block_Size is obtained 
+			/// via AK::StreamMgr::IAkLowLevelIOHook::GetBlockSize(). 
+			/// \return 
+			///     - AK_Success:   transfer was successful.
+			///     - AK_Fail:      an error occured.
+			virtual AKRESULT Write(
+				AkFileDesc& in_fileDesc,        ///< File descriptor.
+				const AkIoHeuristics& in_heuristics,		///< Heuristics for this data transfer.
+				void* in_pData,           ///< Data to be written.
+				AkIOTransferInfo& io_transferInfo		///< Synchronous data transfer info. 
+			) = 0;
 		};
 
 		/// File location resolver interface. There is one and only one File Location Resolver that is

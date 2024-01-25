@@ -1,0 +1,37 @@
+{
+ "PlatformInfo": {
+  "Platform": {
+   "Name": "Windows",
+   "BasePlatform": "Windows",
+   "Generator": "2023.1.0.8367"
+  },
+  "RootPaths": {
+   "ProjectRoot": "../../../../Users/Xavi/OneDrive/Documentos/WwiseProjects/GameEngine",
+   "SourceFilesRoot": "../../../../Users/Xavi/OneDrive/Documentos/WwiseProjects/GameEngine/.cache/Windows",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "../../../../Users/Xavi/OneDrive/Documentos/WwiseProjects/GameEngine/GeneratedSoundBanks/Windows"
+  },
+  "DefaultAlign": "16",
+  "Settings": {
+   "AutoSoundBankDefinition": "false",
+   "CopyLooseStreamedMediaFiles": "true",
+   "SubFoldersForGeneratedFiles": "false",
+   "RemoveUnusedGeneratedFiles": "true",
+   "SourceControlGeneratedFiles": "false",
+   "GenerateHeaderFile": "true",
+   "GenerateContentTxtFile": "true",
+   "GenerateMetadataXML": "true",
+   "GenerateMetadataJSON": "true",
+   "GenerateAllBanksMetadata": "true",
+   "GeneratePerBankMetadata": "false",
+   "UseSoundBankNames": "true",
+   "AllowExceedingMaxSize": "false",
+   "MaxAttenuationInfo": "false",
+   "EstimatedDurationInfo": "false",
+   "PrintObjectGuid": "false",
+   "PrintObjectPath": "false"
+  },
+  "FileHash": "{97C5DCEC-7E6C-059C-2FFB-E6077B0DBEB1}"
+ }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="GameEngine" GUID="{592313CB-5B7C-404E-8563-9DB72E1C18CE}" Generator="2023.1.0.8367"/>
+	<CacheRoot>../../../../Users/Xavi/OneDrive/Documentos/WwiseProjects/GameEngine/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Windows" GUID="{CC698A66-09DE-42E0-96EF-628827CF349F}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="."/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{116BCB87-56DE-4E9B-B45C-CE9986632EC1}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{67B8D55E-D685-D95E-AADC-9CA784865CD2}</FileHash>
+</ProjectInfo>
