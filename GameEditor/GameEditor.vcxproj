@@ -116,14 +116,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\vcpkg\installed\x64-windows\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Wwise\SDK\samples\SoundEngine\Win32\;..\AudioEngine\AudioEngine\;..\vcpkg\installed\x64-windows\include\;..\Wwise\SDK\include\;..\Wwise\SoundBanks\GeneratedSoundBanks\Windows\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\vcpkg\installed\x64-windows\lib\;..\Wwise\SDK\x64_vc170\Debug\lib\;..\vcpkg\installed\x64-windows\lib\manual-link\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sdl2.lib;sdl2main.lib;imgui.lib;jsoncpp.lib;AkAudioInputSource.lib;AkSilenceSource.lib;AkSineSource.lib;AkSoundSeedWindSource.lib;AkSoundSeedWooshSource.lib;AkSynthOneSource.lib;AkToneSource.lib;AkGuitarDistortionFX.lib;AkSoundEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\AudioEngine\AudioEngine\;..\vcpkg\installed\x64-windows\lib\;..\Wwise\SDK\x64_vc170\Debug\lib\;..\vcpkg\installed\x64-windows\lib\manual-link\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib;imgui.lib;jsoncpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>call ..\vcpkg\bootstrap-vcpkg.bat

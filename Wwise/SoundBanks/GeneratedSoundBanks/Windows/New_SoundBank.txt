@@ -1,6 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2452462943	Thud_Event			\Default Work Unit\Thud_Event	
+	712781273	Song2_Event			\Default Work Unit\Song2_Event	
+	3922693286	Song1_Event			\Default Work Unit\Song1_Event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	1504837	Thud	C:\Users\Xavi\OneDrive\Documentos\WwiseProjects\GameEngine\.cache\Windows\SFX\Punch1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Thud		121816
+	913624320	Song1	C:\Users\Xavi\OneDrive\Documentos\WwiseProjects\GameEngine\.cache\Windows\SFX\Ragtime_Piano___SCOTT_JOPLIN_.___The_Entertainer____1902__818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Song1		37777504
+	955917261	Song2	C:\Users\Xavi\OneDrive\Documentos\WwiseProjects\GameEngine\.cache\Windows\SFX\C418_-_Subwoofer_Lullaby_-_Minecraft_Volume_Alpha_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Song2		36819040
 

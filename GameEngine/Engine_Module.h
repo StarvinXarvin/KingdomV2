@@ -26,20 +26,20 @@ public:
 		return true;
 	}
 
-	virtual engine_status PreUpdate()
-	{
-		return ENGINE_UPDATE_CONTINUE;
-	}
+	//virtual engine_status PreUpdate()
+	//{
+	//	return ENGINE_UPDATE_CONTINUE;
+	//}
 
 	virtual engine_status Update()
 	{
 		return ENGINE_UPDATE_CONTINUE;
 	}
 
-	virtual engine_status PostUpdate()
-	{
-		return ENGINE_UPDATE_CONTINUE;
-	}
+	//virtual engine_status PostUpdate()
+	//{
+	//	return ENGINE_UPDATE_CONTINUE;
+	//}
 
 	virtual bool CleanUp()
 	{

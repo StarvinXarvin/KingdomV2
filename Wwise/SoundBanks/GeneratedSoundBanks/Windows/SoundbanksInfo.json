@@ -525,32 +525,49 @@
     "Id": "4072029455",
     "Type": "User",
     "Language": "SFX",
-    "Hash": "{11095389-67E4-6CBE-9295-AD50F25EAE94}",
+    "Hash": "{D7DD5C35-4EDA-5502-E621-B9F58259DA7A}",
     "ShortName": "New_SoundBank",
     "Path": "New_SoundBank.bnk",
     "Media": [
      {
-      "Id": "1504837",
+      "Id": "913624320",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "Punch1.wav",
-      "CachePath": "SFX/Punch1_818F3B66.wem"
+      "ShortName": "Ragtime_Piano___SCOTT_JOPLIN_.___The_Entertainer____1902_.wav",
+      "CachePath": "SFX/Ragtime_Piano___SCOTT_JOPLIN_.___The_Entertainer____1902__818F3B66.wem"
+     },
+     {
+      "Id": "955917261",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "C418_-_Subwoofer_Lullaby_-_Minecraft_Volume_Alpha.wav",
+      "CachePath": "SFX/C418_-_Subwoofer_Lullaby_-_Minecraft_Volume_Alpha_818F3B66.wem"
      }
     ],
     "Events": [
      {
-      "Id": "2452462943",
-      "Name": "Thud_Event",
+      "Id": "3922693286",
+      "Name": "Song1_Event",
       "MediaRefs": [
        {
-        "Id": "1504837"
+        "Id": "913624320"
+       }
+      ]
+     },
+     {
+      "Id": "712781273",
+      "Name": "Song2_Event",
+      "MediaRefs": [
+       {
+        "Id": "955917261"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{0EF651C4-3435-BE28-A6D3-6C6BD12704C5}"
+  "FileHash": "{2BBA2A64-3029-926B-0B69-6665D1BA3F25}"
  }
 }

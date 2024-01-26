@@ -162,23 +162,32 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="4072029455" Type="User" Language="SFX" Hash="{11095389-67E4-6CBE-9295-AD50F25EAE94}">
+		<SoundBank Id="4072029455" Type="User" Language="SFX" Hash="{D7DD5C35-4EDA-5502-E621-B9F58259DA7A}">
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
 			<Media>
-				<File Id="1504837" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Punch1.wav</ShortName>
-					<CachePath>SFX/Punch1_818F3B66.wem</CachePath>
+				<File Id="913624320" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ragtime_Piano___SCOTT_JOPLIN_.___The_Entertainer____1902_.wav</ShortName>
+					<CachePath>SFX/Ragtime_Piano___SCOTT_JOPLIN_.___The_Entertainer____1902__818F3B66.wem</CachePath>
+				</File>
+				<File Id="955917261" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C418_-_Subwoofer_Lullaby_-_Minecraft_Volume_Alpha.wav</ShortName>
+					<CachePath>SFX/C418_-_Subwoofer_Lullaby_-_Minecraft_Volume_Alpha_818F3B66.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2452462943" Name="Thud_Event">
+				<Event Id="3922693286" Name="Song1_Event">
 					<MediaRefs>
-						<MediaRef Id="1504837"/>
+						<MediaRef Id="913624320"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="712781273" Name="Song2_Event">
+					<MediaRefs>
+						<MediaRef Id="955917261"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F2498C1C-6AFB-5CDF-C89A-226F59DB948C}</FileHash>
+	<FileHash>{71204CB4-D773-26CB-A4B6-1AB3316DB292}</FileHash>
 </SoundBanksInfo>

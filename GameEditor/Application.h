@@ -11,6 +11,7 @@
 #include "ModuleRenderer.h"
 #include "ModuleUI.h"
 #include "ModuleResources.h"
+#include "AudioEngine.h"
 
 #include "..\GameEngine\GameEngine.h"
 
@@ -25,6 +26,8 @@ public:
 	ModuleRenderer* renderer;
 	ModuleResources* resources;
 	ModuleUI* ui;
+
+	AudioEngine* audio;
 
 	GameEngine* gEngine;
 

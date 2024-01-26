@@ -13,7 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID THUD_EVENT = 2452462943U;
+        static const AkUniqueID SONG1_EVENT = 3922693286U;
+        static const AkUniqueID SONG2_EVENT = 712781273U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

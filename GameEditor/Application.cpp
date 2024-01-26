@@ -10,6 +10,8 @@ Application::Application()
 	ui = new ModuleUI(this);
 	resources = new ModuleResources(this);
 
+	audio = new AudioEngine();
+
 	// The order of calls is very important!
 	// Modules will Init() Start() and Update in this order
 	// They will CleanUp() in reverse order
@@ -49,6 +51,8 @@ bool Application::Init()
 	{
 		item->Start();
 	}
+
+	audio->AudioInit();
 
 	return ret;
 }
@@ -90,6 +94,8 @@ update_status Application::Update()
 		if (ret != update_status::UPDATE_CONTINUE) return ret;
 	}
 
+	audio->AudioUpdate();
+
 	FinishUpdate();
 
 	const auto frameEnd = std::chrono::steady_clock::now();
@@ -125,6 +131,8 @@ bool Application::CleanUp()
 		ret = item->CleanUp();
 		if (ret != true) return ret;
 	}
+
+	audio->AudioCleanUp();
 
 	delete gEngine;
 
