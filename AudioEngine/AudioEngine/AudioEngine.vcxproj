@@ -46,7 +46,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -137,6 +137,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\Wwise\SoundBanks\GeneratedSoundBanks\Windows\;..\..\Wwise\SDK\include\;..\..\Wwise\SDK\samples\SoundEngine\Win32\;..\..\vcpkg\installed\x64-windows\include\;..\..\Wwise\SDK\samples\SoundEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -144,6 +145,10 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>AkSoundEngine.lib;AkMemoryMgr.lib;AkStreamMgr.lib;AkMusicEngine.lib;AkSpatialAudio.lib;AkAudioInputSource.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Wwise\SDK\x64_vc170\Release\lib\;..\..\vcpkg\installed\x64-windows\lib\;..\..\vcpkg\installed\x64-windows\lib\manual-link;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkDefaultLowLevelIODispatcher.cpp" />
@@ -154,9 +159,15 @@
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkJobWorkerMgr.cpp" />
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkMultipleFileLocation.cpp" />
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkPlatformProfilerHookStubs.cpp" />
-    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookDeferred.cpp" />
-    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkPlatformProfilerHooks.cpp" />
-    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\stdafx.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookDeferred.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkPlatformProfilerHooks.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\stdafx.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="AudioEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -171,9 +182,15 @@
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkJobWorkerMgr.h" />
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkMultipleFileLocation.h" />
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkPlatformProfilerHooks.h" />
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookDeferred.h" />
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkFileHelpers.h" />
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\stdafx.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookDeferred.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkFileHelpers.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\stdafx.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="AudioEngine.h" />
   </ItemGroup>
   <ItemGroup>
