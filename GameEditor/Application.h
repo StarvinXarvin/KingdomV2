@@ -11,7 +11,7 @@
 #include "ModuleRenderer.h"
 #include "ModuleUI.h"
 #include "ModuleResources.h"
-#include "AudioEngine.h"
+#include "../AudioEngine/AudioEngine/AudioEngine.h"
 
 #include "..\GameEngine\GameEngine.h"
 

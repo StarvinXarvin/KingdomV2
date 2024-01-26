@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.32630.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEditor", "GameEditor\GameEditor.vcxproj", "{04417756-9284-4520-B60C-F8AA27AEB265}"
 	ProjectSection(ProjectDependencies) = postProject
+		{111FB807-F1DF-4C33-B081-F659583A538F} = {111FB807-F1DF-4C33-B081-F659583A538F}
 		{B8AE9EBE-E4DE-4C7F-919A-AD6D340E9BB4} = {B8AE9EBE-E4DE-4C7F-919A-AD6D340E9BB4}
 	EndProjectSection
 EndProject

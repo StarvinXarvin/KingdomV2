@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -121,9 +121,13 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32.lib;glu32.lib;opengl32.lib;sdl2.lib;sdl2main.lib;DevIL.lib;assimp-vc143-mt.lib;AkAudioInputSource.lib;AkSilenceSource.lib;AkSineSource.lib;AkSoundSeedWindSource.lib;AkSoundSeedWooshSource.lib;AkSynthOneSource.lib;AkToneSource.lib;AkGuitarDistortionFX.lib;AkSoundEngine.lib;AkMemoryMgr.lib;AkStreamMgr.lib;AkMusicEngine.lib;CommunicationCentral.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib;AkAudioInputSource.lib;AkSilenceSource.lib;AkSineSource.lib;AkSoundSeedWindSource.lib;AkSoundSeedWooshSource.lib;AkSynthOneSource.lib;AkToneSource.lib;AkGuitarDistortionFX.lib;AkSoundEngine.lib;AkMemoryMgr.lib;AkStreamMgr.lib;AkMusicEngine.lib;CommunicationCentral.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\vcpkg\installed\x64-windows\lib\;..\..\Wwise\SDK\x64_vc170\Debug\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>..\..\Wwise\SDK\x64_vc170\Debug\lib\;..\..\vcpkg\installed\x64-windows\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CommunicationCentral.lib;AkSoundEngine.lib;AkMemoryMgr.lib;AkStreamMgr.lib;AkMusicEngine.lib;AkSpatialAudio.lib;AkAudioInputSource.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -142,10 +146,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkDefaultLowLevelIODispatcher.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFileLocationBase.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackage.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackageLUT.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkGeneratedSoundBanksResolver.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkJobWorkerMgr.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkMultipleFileLocation.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkPlatformProfilerHookStubs.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookBlocking.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookDeferred.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkPlatformProfilerHooks.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkSoundEngineDLL.cpp" />
+    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\stdafx.cpp" />
     <ClCompile Include="AudioEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkDefaultLowLevelIODispatcher.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFileHelpersBase.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFileLocationBase.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackage.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackageLowLevelIO.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackageLowLevelIODeferred.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackageLUT.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkGeneratedSoundBanksResolver.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkJobWorkerMgr.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkMultipleFileLocation.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkPlatformProfilerHooks.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookBlocking.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookDeferred.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkFileHelpers.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkFilePackageLowLevelIOBlocking.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkSoundEngineDLL.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkSoundEngineExports.h" />
+    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\stdafx.h" />
     <ClInclude Include="AudioEngine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackageLowLevelIO.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
