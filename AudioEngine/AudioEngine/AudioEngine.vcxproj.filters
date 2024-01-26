@@ -2,111 +2,93 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="AudioEngine.cpp" />
-    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookBlocking.cpp">
-      <Filter>Library Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookDeferred.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkPlatformProfilerHooks.cpp">
-      <Filter>Library Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkSoundEngineDLL.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\stdafx.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkDefaultLowLevelIODispatcher.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFileLocationBase.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackage.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackageLUT.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkGeneratedSoundBanksResolver.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkJobWorkerMgr.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkMultipleFileLocation.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkPlatformProfilerHookStubs.cpp">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AudioEngine.h" />
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookBlocking.h">
-      <Filter>Library Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookDeferred.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkFileHelpers.h">
-      <Filter>Library Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkFilePackageLowLevelIOBlocking.h">
-      <Filter>Library Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkSoundEngineDLL.h">
-      <Filter>Library Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkSoundEngineExports.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\stdafx.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkDefaultLowLevelIODispatcher.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFileHelpersBase.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFileLocationBase.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackage.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackageLowLevelIO.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackageLowLevelIODeferred.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackageLUT.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkGeneratedSoundBanksResolver.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkJobWorkerMgr.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkMultipleFileLocation.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkPlatformProfilerHooks.h">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Library Files">
+    <Filter Include="Wwise Files">
       <UniqueIdentifier>{837140d1-a14f-4ed7-a031-1749f2f30584}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkFilePackageLowLevelIO.inl">
-      <Filter>Library Files</Filter>
+      <Filter>Wwise Files</Filter>
     </None>
   </ItemGroup>
 </Project>

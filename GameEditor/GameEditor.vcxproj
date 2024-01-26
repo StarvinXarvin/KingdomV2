@@ -116,7 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\vcpkg\installed\x64-windows\include\;..\Wwise\SoundBanks\GeneratedSoundBanks\Windows\;..\Wwise\SDK\include\;..\Wwise\SDK\samples\SoundEngine\Win32\;..\Wwise\SDK\samples\SoundEngine\Common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vcpkg\installed\x64-windows\include\;..\Wwise\SDK\include\;..\Wwise\SDK\samples\SoundEngine\Win32\;..\Wwise\SoundBanks\GeneratedSoundBanks\Windows\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>

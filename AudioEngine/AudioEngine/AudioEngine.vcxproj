@@ -116,7 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\Wwise\SoundBanks\GeneratedSoundBanks\Windows\;..\..\Wwise\SDK\include\;..\..\Wwise\SDK\samples\SoundEngine\Win32\;..\..\vcpkg\installed\x64-windows\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Wwise\SoundBanks\GeneratedSoundBanks\Windows\;..\..\Wwise\SDK\include\;..\..\Wwise\SDK\samples\SoundEngine\Win32\;..\..\vcpkg\installed\x64-windows\include\;..\..\Wwise\SDK\samples\SoundEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,7 +125,7 @@
       <AdditionalLibraryDirectories>..\..\vcpkg\installed\x64-windows\lib\;..\..\Wwise\SDK\x64_vc170\Debug\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>..\..\Wwise\SDK\x64_vc170\Debug\lib\;..\..\vcpkg\installed\x64-windows\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\Wwise\SDK\x64_vc170\Debug\lib\;..\..\vcpkg\installed\x64-windows\lib\;..\..\vcpkg\installed\x64-windows\lib\manual-link;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>CommunicationCentral.lib;AkSoundEngine.lib;AkMemoryMgr.lib;AkStreamMgr.lib;AkMusicEngine.lib;AkSpatialAudio.lib;AkAudioInputSource.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
@@ -154,10 +154,8 @@
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkJobWorkerMgr.cpp" />
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkMultipleFileLocation.cpp" />
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkPlatformProfilerHookStubs.cpp" />
-    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookBlocking.cpp" />
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookDeferred.cpp" />
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkPlatformProfilerHooks.cpp" />
-    <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkSoundEngineDLL.cpp" />
     <ClCompile Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\stdafx.cpp" />
     <ClCompile Include="AudioEngine.cpp" />
   </ItemGroup>
@@ -173,12 +171,8 @@
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkJobWorkerMgr.h" />
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkMultipleFileLocation.h" />
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Common\AkPlatformProfilerHooks.h" />
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookBlocking.h" />
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkDefaultIOHookDeferred.h" />
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkFileHelpers.h" />
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkFilePackageLowLevelIOBlocking.h" />
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkSoundEngineDLL.h" />
-    <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\AkSoundEngineExports.h" />
     <ClInclude Include="..\..\Wwise\SDK\samples\SoundEngine\Win32\stdafx.h" />
     <ClInclude Include="AudioEngine.h" />
   </ItemGroup>
